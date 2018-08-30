@@ -34,13 +34,20 @@ hbs.registerHelper('currentYear', () => {
 app.get('/', (req, res) => {
     res.render('index.hbs', {
         pageTitle: 'Index Page',
-        name: 'Robin'
+        name: 'Robin Larsson'
     })
 })
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
-        name: 'Robin',
+        name: 'Robin Larsson',
         pageTitle: 'About Page'
+    });
+})
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        name: 'Robin Larsson',
+        pageTitle: 'Portfolio Page'
     });
 })
 
@@ -51,4 +58,6 @@ app.get('/bad', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is up on ${port}`)
 });
+
+
 
